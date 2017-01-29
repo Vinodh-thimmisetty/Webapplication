@@ -1,0 +1,14 @@
+MVC : Model-View-Controller Architecture
+Request from Google Chrome ->
+ Controller i.e, SERVLET (which will redirect to its corresponding action) ->
+ Service i.e, JAVA Beans/Classes (Do condition checks or an validations) ->
+ View i.e, HTML/JSP (A nice HTML way sent back as response) ->
+Response will be shown in Google Chrome
+
+Its more like separating the job of each role, without caring others work.
+
+Sample MVC :: Login Screen + Authentication + Success/fail pages
+Controller ==> LoginServlet
+Business Service ==> Authentication ++ IF fails redirect to login page
+Model ==> 
+View ==>  
