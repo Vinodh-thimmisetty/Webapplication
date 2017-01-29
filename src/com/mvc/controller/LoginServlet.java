@@ -40,7 +40,8 @@ public class LoginServlet extends HttpServlet {
 			  //request.getSession().setAttribute("user",user);
 			 //response.sendRedirect("../mvcView/success.jsp"); // browser will treat this is NEW Request
 			 // We can do Redirects from one servlet to other using Request Dispatcher without behaving as new Request
-			request.setAttribute("user", user);
+			user.setPwd(request.getParameter("pwd"));
+			 request.setAttribute("user", user);
 			 RequestDispatcher requestDispatcher =  request.getRequestDispatcher("../mvcView/success.jsp");
 			requestDispatcher.forward(request, response);
 			return;

@@ -15,9 +15,12 @@
 	<!--  	User Name :: <% //user1.getUserName()	%>	-->
 	<!--  JSTL way of accessing java objects -->
 	<jsp:useBean id="user" class="com.mvc.model.User" scope="request">
+		<jsp:setProperty property="pwd" name="user" param="pwd" />
+		<jsp:setProperty property="userName" name="user" value="userName pwd" />
 	</jsp:useBean>
 	User Name from JSTL ::: <%= user.getUserName() %> <br>
-	Value from jsp Property :: <jsp:getProperty property="userName" name="user"/>
-	
+	Value from jsp Property :: <jsp:getProperty property="userName" name="user"/><br>
+	<!--  Request parameters from jsp:get property -->
+	Password passed into the Request is :: <jsp:getProperty property="pwd" name="user" />
 </body>
 </html>
