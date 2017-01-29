@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample Request Form Submission</title>
+</head>
+<body>
+<!-- Default Action is get && name will be passed as request parameter  -->
+<form action="helloServlet">
+	<input type="text" name="user" />
+	<input type="submit" value="SubmitGET">
+</form>
+
+<form action="helloServlet" method="post">
+	User Name: <input type="text" name="user" /> <br/>
+	Full Name: <input type="text" name="fullName" /><br/>
+	Password: <input type="password" name="pwd"/><br/>
+	Profession:
+	<input type="radio" name="prof" value="Developer">Developer
+	<input type="radio" name="prof" value="Architect">Architect
+	<select name="age">
+		<option value="kid"><10</option>
+	 	<option value="adult">10-20</option>
+	 	<option value="men">0-50</option>
+	 	<option value="old">>50</option>
+	
+	</select>
+<!-- Multiple values passed in the Request -->
+	<select name="location" multiple size="2">
+		<option value="IN">India</option>
+	 	<option value="USA">America</option>
+	 	<option value="UK">England</option>
+	 	<option value="Aus">Australia</option>
+	
+	</select>
+<input type="submit" value="SubmitPOST">
+</form>
+
+
+</body>
+</html>
